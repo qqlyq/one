@@ -1,0 +1,382 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.account-section a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.account-section a:hover {
+  text-decoration: underline;
+}
+
+/* Main Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: #fff;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(112, 206, 244);
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+
+.search-bar select {
+  border: none;
+  padding: 5px;
+  background: none;
+  outline: none;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 200px;
+}
+
+.search-bar button {
+  background-color: #00aeef;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cart-section {
+  display: flex;
+  align-items: center;
+}
+
+.wishlist-btn {
+  background-color: #00aeef;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.cart-info {
+  display: flex;
+  align-items: center;
+}
+
+.cart-info p {
+  margin-left: 10px;
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+
+.cart-info span {
+  font-weight: bold;
+}
+
+.jumbotron {
+  background-image: url("../../public/assets/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  height: 500px;
+}
+
+/* Main Navigation */
+.main-nav {
+  background-color: rgb(112, 206, 244);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  box-shadow: 0px 4px 2px -2px gray; /* Optional: Adds a shadow for visual separation */
+  position: -webkit-sticky; /* For Safari */
+  padding: 10px 0; /* Optional: Padding for better appearance */
+}
+
+.main-nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.main-nav ul li {
+  margin: 0 15px;
+}
+
+.main-nav ul li:first-child {
+  margin-left: 0 !important;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.btn-default {
+  width: 44px;
+  height: 44px;
+  color: #fff;
+  text-align: center;
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.cart-btn {
+  background-color: #f00;
+  border: none;
+}
+
+/* Hides the full header or navbar */
+.hidden {
+  display: none !important;
+}
+
+/* Shows the full header or navbar */
+.visible {
+  display: block;
+}
+
+/* Hamburger button styling */
+.hamburger {
+  display: none; /* Hide by default for larger screens */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(112, 206, 244); /* Same color as main-nav */
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff; /* White lines */
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Desktop navigation styling */
+.desktop-nav {
+  background-color: rgb(112, 206, 244);
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.desktop-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Mobile navigation styling */
+.mobile-nav {
+  display: none; /* Hide by default on larger screens */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .top-bar-address p,
+  .account-section a {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .account-section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Smaller logo */
+  .logo img {
+    height: 50px;
+  }
+
+  /* Compact search bar */
+  .search-bar {
+    padding: 3px 5px;
+    border-radius: 20px;
+  }
+
+  .search-bar select,
+  .search-bar input {
+    font-size: 12px;
+  }
+
+  .search-bar input {
+    width: 50px; /* Set a smaller width for mobile */
+  }
+
+  .search-bar button {
+    width: 36px; /* Reduce icon size */
+    height: 36px;
+  }
+
+  .cart-section{
+    gap: 10px;
+  }
+
+  /* Compact cart icons */
+  .cart-section .wishlist-btn,
+  .cart-section .cart-btn {
+    width: 36px;
+    height: 36px;
+    margin-right: 0;
+  }
+
+  .cart-info{
+    gap: 5px;
+  }
+
+  .cart-section .cart-info p {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .main-header{
+    gap: 10px;
+  }
+  .jumbotron h1 {
+    font-size: 1.5rem;
+  }
+
+  .jumbotron p {
+    font-size: 1rem;
+  }
+  
+  .jumbotron {
+    height: 200px;
+  }
+
+  .jumbotron .container{
+    margin-top: 112px;
+  }
+
+  .main-container{
+    margin-top: 50px;
+  }
+
+  .card{
+    margin: 10px;
+  }
+
+  .budget-tiers-row{
+    gap: 20px;
+  }
+
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-main-nav {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  /* Show hamburger icon on mobile and hide nav links initially */
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(112, 206, 244);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Show nav links when menu is active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .main-nav ul li {
+    margin: 10px 0;
+  }
+
+  .main-nav ul li a {
+    font-size: 16px;
+  }
+
+  .visible{
+    height: 47px;
+    top: 0;
+  }
+}

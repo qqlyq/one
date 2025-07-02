@@ -1,0 +1,134 @@
+/* ========= GLOBAL STYLES ========= */
+
+/* 🔄 Loading Screen */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+
+  .loading-spinner {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    color: #61dafb !important;
+  }
+
+  .loading-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .loading-subtext {
+    font-size: 1rem;
+    color: #777;
+  }
+
+  .ai-highlight {
+    font-weight: bold;
+    color: #61dafb;
+  }
+
+ /* 🔥 AI Banner (Cool Animated Version) */
+.ai-banner {
+    background-color: #E3F2FD;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.2s ease-out, fadeIn 2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 🔄 Simple fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 🎯 Preference Buttons */
+  .preference-button {
+    border-color: #61dafb !important;
+    color: black !important;
+  }
+
+  /* 🔄 Hover Effects */
+  .preference-button:hover {
+    background-color: #4db5e5 !important;
+    border-color: #4db5e5 !important;
+    color: white !important;
+  }
+
+  /* ✅ Active Button State */
+  .preference-button.active {
+    background-color: #61dafb !important;
+    border-color: #61dafb !important;
+    color: white !important;
+  }
+
+  /* 📌 Scrollable Modal Body */
+  .scrollable-modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  /* 🏷️ Category Titles */
+  .category-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .category-subtitle {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+
+/* ✅ New Activity Styling */
+.new-activity {
+  border-left: 5px solid #28a745 !important;
+}
+.new-badge {
+  background-color: #28a745;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-left: 6px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* ❌ Removed Activity Styling */
+.removed-activity {
+  border-left: 5px solid #d9534f !important;
+  opacity: 0.7;
+}
+.removed-badge {
+  background-color: #d9534f;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-left: 6px;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.MuiTimelineItem-positionRight::before{
+  display: none !important;
+}
+
+

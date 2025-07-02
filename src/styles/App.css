@@ -1,0 +1,111 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Makes the modal wider and centers it */
+
+.modal-dialog.custom-map-modal {
+  max-width: 50vw !important;
+  margin: auto !important;
+  display: flex;
+  justify-content: center; /* centers modal dialog horizontally */
+}
+
+.modal-dialog.custom-map-modal .modal-content {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-dialog.custom-map-modal .modal-body {
+  padding: 0 !important; /* remove padding if needed */
+  display: flex;
+  justify-content: center;  /* centers children horizontally */
+  align-items: center;     /* centers children vertically */
+  height: 500px !important;
+  flex-direction: column;
+}
+
+.modal-dialog.custom-map-modal .modal-body > div:first-child {
+  width: 100% !important;
+  height: 100% !important;
+}
+.modal-dialog.help-modal {
+  max-width: 400px;
+  width: 90vw;
+  margin: auto;              /* Centers it */
+  display: flex;
+  justify-content: center;   /* Extra safety */
+  align-items: center;
+}
+.modal-dialog.scenario-modal {
+  max-width: 400px; /* or 90vw for responsiveness */
+  width: 90vw;
+  margin: auto;
+  justify-content: center;   /* Extra safety */
+  align-items: center;
+}
+
+
+.dropdown-toggle-no-caret::after {
+  display: none !important;
+}
+
+.modal-dialog.preference-modal {
+  max-width: 600px !important;
+  width: 100% !important;
+  margin: auto;
+}
+
+.modal-dialog.preference-modal .modal-content {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.modal-dialog.preference-modal .modal-body {
+  width: 100% !important;
+  padding: 1.5rem !important; /* or adjust as needed */
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+ul.budget-tiers-list {
+  list-style-type: none;
+}
+
+ul.budget-tiers-list li {
+  text-align: left;
+  line-height: 30px;
+}
+

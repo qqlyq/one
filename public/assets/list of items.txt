@@ -1,0 +1,118 @@
+  const items1 = [
+    {
+      title: "Le Passé Composé",
+      category: "Breakfast",
+      duration: "1 hours",
+      description:
+       "A cozy café known for its delicious and hearty breakfast options, including the best eggs Benedict in Montreal.",
+      image: "/assets/passe_compose.jpg",
+    },
+    {
+      title: "Stop by Marché Jean-Talon",
+      category: "Stop by Marché Jean-Talon",
+      duration: "1.5 hours",
+      description:
+        "Visit one of Montreal's largest public markets, offering fresh local produce, cheeses, meats, and unique artisanal products. A great way to experience the city's food scene.",
+      image: "/assets/marche_jean_talon.jpg",
+    },
+    {
+      title: "La Banquise",
+      category: "Lunch",
+      duration: "2 hours",
+      description:
+        "Famous for its poutine, this casual spot is perfect for enjoying Montreal's iconic comfort food in a variety of flavors.",
+      image: "/assets/poutine.png",
+    },
+    {
+      title: "Take a Stroll on Sherbrooke Street",
+      category: "Exploring the streets",
+      duration: "2 hours",
+      description:
+        "Enjoy the elegant architecture and window shopping along this iconic street.",
+      image: "/assets/sherbrooke_street.jpg",
+    },
+    {
+      title: "Dinner",
+      category: "Dining Experience",
+      duration: "2 hours",
+      description:
+        "Enjoy a casual yet refined dinner at Garde Manger, a popular Montreal restaurant.",
+      image: "/assets/img2.png",
+    },
+    {
+      title: "Visit Nhậu Bar",
+      category: "Dining Experience",
+      duration: "2 hours",
+      description:
+        "A vibrant spot offering delicious Vietnamese-inspired cocktails and small plates, perfect for a night out with friends.",
+      image: "/assets/nahu.jpg",
+    },
+  ];
+
+
+
+  const items2 = [
+    {
+      title: "La Banquise",
+      category: "Lunch",
+      duration: "2 hours",
+      description:
+        "Famous for its poutine, this casual spot is perfect for enjoying Montreal's iconic comfort food in a variety of flavors.",
+      image: "/assets/poutine.png",
+    },
+    {
+      title: "Take a Stroll on Sherbrooke Street",
+      category: "Exploring the streets",
+      duration: "2 hours",
+      description:
+        "Enjoy the elegant architecture and window shopping along this iconic street.",
+      image: "/assets/sherbrooke_street.jpg",
+    },
+    {
+      title: "Dinner",
+      category: "Dining Experience",
+      duration: "2 hours",
+      description:
+        "Enjoy a casual yet refined dinner at Garde Manger, a popular Montreal restaurant.",
+      image: "/assets/img2.png",
+    },
+    {
+      title: "Visit Nhậu Bar",
+      category: "Dining Experience",
+      duration: "2 hours",
+      description:
+        "A vibrant spot offering delicious Vietnamese-inspired cocktails and small plates, perfect for a night out with friends.",
+      image: "/assets/nahu.jpg",
+    },
+
+  ];
+
+  const items3 = [
+    {
+      title: "Take a Stroll on Sherbrooke Street",
+      category: "Exploring the streets",
+      duration: "2 hours",
+      description:
+        "Enjoy the elegant architecture and window shopping along this iconic street.",
+      image: "/assets/sherbrooke_street.jpg",
+    },
+    {
+      title: "Dinner",
+      category: "Dining Experience",
+      duration: "2 hours",
+      description:
+        "Enjoy a casual yet refined dinner at Garde Manger, a popular Montreal restaurant.",
+      image: "/assets/img2.png",
+    },
+  ];
+
+  const onlyDinner = [
+    {
+      title: "Dinner",
+      category: "Dining Experience",
+      duration: "2 hours",
+      description:
+        "Enjoy a casual yet refined dinner at Garde Manger, a popular Montreal restaurant.",
+      image: "/assets/img2.png",
+    },
+  ];

@@ -1,0 +1,271 @@
+.itinerary-header {
+  margin-bottom: 20px;
+  z-index: auto;
+}
+
+.day-button {
+  transition: all 0.3s;
+  border: 2px solid #00aeef;
+  font-size: 18px;
+  border-radius: 40px !important;
+  @media screen and (max-width: 768px)  {
+    font-size: 11px !important;
+    border-radius: 20px;
+  }
+}
+
+.map-button {
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.custom-card {
+  cursor: pointer;
+}
+
+.card-body-itinerary-item {
+  display: flex;
+}
+
+.card-body-expanded {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.1em;
+  text-align: left;
+  font-weight: 700 !important;
+}
+
+#formArrivalMethod{
+  border: 0.5px solid;
+}
+
+.main-active-card{
+  width: 100%;
+  @media screen and (max-width: 768px)  {
+    width: 325px;
+  }
+}
+
+.card-details {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+  text-align: left;
+}
+
+.card-description {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.read-more-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.read-more-text {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: underline;
+}
+
+.read-more-icon {
+  font-size: 1em;
+  margin-left: 4px;
+  color: #333;
+}
+
+/* General Card Styling */
+.card-dayone {
+  width: 325px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card-text strong {
+  color: #333;
+}
+
+.card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Read More Button */
+.read-more-button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #007bff;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.read-more-button .material-icons {
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+/* Ways to Get There List */
+.ways-to-get {
+  margin-top: 16px;
+}
+
+.ways-to-get strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.ways-to-get ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ways-to-get li {
+  margin: 4px 0;
+}
+
+.ways-to-get a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.ways-to-get a:hover {
+  text-decoration: underline;
+}
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px; 
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+.chatbot-icon {
+  position: relative;
+}
+
+.custom-tooltip {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: absolute;
+  right: 180%; /* Center horizontally */
+  transform: translateX(50%);
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chatbot-icon:hover .custom-tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.day-summary-container {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  color: #333;
+  padding: 5px;
+  margin-bottom: 0;
+  @media screen and (max-width: 768px)  {
+    font-weight: 11px;
+  }
+}
+
+.day-summary {
+  margin-top: 10px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px)  {
+  .day-summary-container{
+    font-size: 13px;
+  }
+}
+
+.avatar-chat-wrapper {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  z-index: 999;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  width: 300px;
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.close-chat-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
