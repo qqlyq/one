@@ -14,6 +14,8 @@ const AllLocationGuide = ({ show, onHide, activities,day,planId }) => {
     const isFullscreenRef = useRef(isFullscreen);
     const [audioLang, setAudioLang] = useState("en");
   const availableLanguages = Object.keys(selectedActivity?.audio_filename || {});
+  const [isPlaying, setIsPlaying] = useState(false);
+
 
 
 
@@ -110,6 +112,41 @@ useEffect(() => {
         map.fitBounds(bounds);
         mapInstance.current = map;
         boundsRef.current = bounds;
+        // Show user location
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const userLatLng = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+
+      const userMarker = new window.google.maps.Marker({
+        position: userLatLng,
+        map: mapInstance.current,
+        title: "Your Location",
+        icon: {
+          url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+        },
+      });
+      const userInfoWindow = new window.google.maps.InfoWindow({
+        content: `<div><strong>My Location</strong></div>`,
+      });
+
+      userInfoWindow.open(mapInstance.current, userMarker);
+
+      // Optional: Extend bounds to include user
+      bounds.extend(userLatLng);
+      map.fitBounds(bounds);
+    },
+    (error) => {
+      console.warn("Geolocation error:", error);
+    }
+  );
+} else {
+  console.warn("Geolocation not supported by this browser.");
+}
+
 
         fetch(`http://127.0.0.1:8002/api/polyline?plan_id=${planId}`)
   .then(res => res.json())
@@ -217,7 +254,7 @@ useEffect(() => {
   centered
 >
   <Modal.Header closeButton>
-    <Modal.Title>Activity Locations For Day {day}</Modal.Title>
+    <Modal.Title>Activity Locations For One Day Quebec Tour</Modal.Title>
   </Modal.Header>
 
   <Modal.Body>
@@ -254,37 +291,49 @@ useEffect(() => {
             <p className="popup-info">
           <strong>💰 Price:</strong> {selectedActivity.price || "Not listed"}
           </p>
-          {availableLanguages.length > 0 ? (
-  <div className="mb-2">
-    <div className="d-flex align-items-center mb-1">
-      <strong className="me-2">🔈 Audio:</strong>
-      <select
-        className="form-select form-select-sm w-auto"
-        value={audioLang}
-        onChange={(e) => setAudioLang(e.target.value)}
-      >
-        {availableLanguages.map((lang) => (
-          <option key={lang} value={lang}>
-            {lang.toUpperCase()}
-          </option>
-        ))}
-      </select>
+          {selectedActivity?.audio_filename ? (
+  <div className="mb-2 d-flex align-items-center">
+    <strong className="me-2">🔈 Audio:</strong>
+    {!isPlaying ? (
       <Button
         size="sm"
         variant="outline-primary"
-        className="ms-2"
+        className="me-2"
         onClick={() => {
-          const audio = new Audio(`/audio/${audioLang}/${selectedActivity.audio_filename}`);
-          audio.play();
+          if (!window.audioPlayer) {
+            window.audioPlayer = new Audio(`/audio/en/${selectedActivity.audio_filename}`);
+            window.audioPlayer.addEventListener("ended", () => {
+              setIsPlaying(false);
+              window.audioPlayer = null;
+            });
+          }
+          window.audioPlayer.play();
+          setIsPlaying(true);
         }}
       >
-        Play Audio
+        ▶ Play
       </Button>
-    </div>
+    ) : (
+      <Button
+        size="sm"
+        variant="outline-secondary"
+        onClick={() => {
+          if (window.audioPlayer) {
+            window.audioPlayer.pause();
+          }
+          setIsPlaying(false);
+        }}
+      >
+        ⏸ Pause
+      </Button>
+    )}
   </div>
 ) : (
   <p className="text-muted">No audio available</p>
 )}
+
+
+
 
 
         <p className="popup-description">

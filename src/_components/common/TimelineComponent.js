@@ -104,67 +104,11 @@ const TimelineComponent = ({ activities, removedActivities, newActivities, day_i
             <Timeline position="right">
                 {activities.map((activity, index) => (
                     <TimelineItem key={activity.activity_id}>
-                        {/* <TimelineSeparator> */}
-                            {/* ✅ Start Time - Positioned Exactly Above Icon */}
-                            {/* <Typography
-                                sx={{
-                                    fontSize: "10px",
-                                    backgroundColor: "#f4f4f4",
-                                    color: "#555",
-                                    padding: "2px 6px",
-                                    borderRadius: "10px",
-                                    fontWeight: "bold",
-                                    textAlign: "center",
-                                    position: "relative",
-                                    top: "-12px",
-                                    display: "inline-block"
-                                }}
-                            >
-                                {activity.start_time}
-                            </Typography> */}
-
-                            {/* Activity Icon */}
-                            {/* {!activity.isRemoved && !activity.isNew && (
-                                <TimelineDot sx={{ backgroundColor: categoryColors[activity.category] || "#4db5e5", color: "white" }}>
-                                    {iconMapping[activity.category] || iconMapping["Sightseeing"]}
-                                </TimelineDot>
-                            )}
-
-                            {activity.isRemoved && (
-                                <TimelineDot color="error">
-                                    <RemoveCircleOutline />
-                                </TimelineDot>)}
-                            {activity.isNew && (
-                                <TimelineDot color="success">
-                                    <AddCircleOutline />
-                                </TimelineDot>)}
-
-                            {/* Connector */}
-                            {/* {index !== activities.length - 1 && <TimelineConnector />} */} 
-
-                            {/* ✅ End Time - Positioned at the bottom before next activity */}
-                            {/* {index < activities.length - 1 && (
-                                <Typography
-                                    sx={{
-                                        fontSize: "10px",
-                                        backgroundColor: "#f4f4f4",
-                                        color: "#555",
-                                        padding: "2px 6px",
-                                        borderRadius: "10px",
-                                        fontWeight: "bold",
-                                        textAlign: "center",
-                                        position: "relative",
-                                        bottom: "-12px",
-                                        display: "inline-block"
-                                    }}
-                                >
-                                    {activities[index + 1].start_time}
-                                </Typography>
-                            )} */}
-                        {/* </TimelineSeparator> */}
+                        {console.log(activity)}
                         <TimelineContent>
                             <Box mb={2}>
                                 <ActivityCard
+                                
                                     key={activity.place_id || index}
                                     data={{
                                         day_index: day_index,
@@ -175,7 +119,7 @@ const TimelineComponent = ({ activities, removedActivities, newActivities, day_i
                                         budget: activity.budget,
                                         category: activity.category,
                                         description: activity.activity_desc,
-                                        duration: `${addAmPmIfMissing(activity.start_time)} - ${addAmPmIfMissing(activity.end_time)}`,
+                                        duration: `${activity.start_time} ${activity.start_time_amPm} - ${activity.end_time} ${activity.end_time_amPm}`,
                                         image: activity.image_url,
                                         cost: activity.avg_cost_per_person,
                                     }}

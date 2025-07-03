@@ -179,11 +179,11 @@ const priceLevel =
               <h5 className="card-title" style={{ margin: 0 }}>{localData.name}</h5>
                 <p className="card-details" style={{ margin: "5px 0", fontSize: "0.9rem" }}>
                   ⏱️ <strong>{localData.duration || "N/A"}</strong>
-                  <br />
-                  💰 <strong>{priceLevel}</strong>
+                  {/* <br /> */}
+                  {/* 💰 <strong>{priceLevel}</strong> */}
                   
 
-                  <br />
+                  {/* <br /> */}
                   <div style={{ marginTop: "5px", display: "flex", alignItems: "center", gap: "10px" }}>
                     <GeoAltFill
                       size={20}
